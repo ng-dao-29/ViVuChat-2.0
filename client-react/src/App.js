@@ -1,5 +1,5 @@
 import './App.css';
-import {Route, Routes} from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import Home from "./components/page/Home";
 import Login from "./components/page/Login";
 import CheckToken from "./components/authHandel/CheckToken";
@@ -10,17 +10,17 @@ function App() {
         <Routes>
             <Route path="/" element={
                 <CheckToken>
-                    <Home/>
+                    <Home />
                 </CheckToken>
-            }/>
+            } />
             <Route path="/chat/:id" element={
                 <CheckToken>
                     <Home>
-                        <ShowChat/>
+                        <ShowChat />
                     </Home>
-                </CheckToken>}/>
-            <Route path="/login" element={<Login/>}/>
-            <Route path="/register" element={<Register/>}/>
+                </CheckToken>} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/register" element={<Register />} />
         </Routes>
     );
 }
